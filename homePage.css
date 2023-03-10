@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
 
@@ -31,12 +30,14 @@ body{
 header {
     display: flex;
     height: 80px;
-    width: 100%;
-    background-color: var(--BgBlue);
+    width: 100vw;
+    /* background-color: var(--BgBlue); */
+    background-color: red;
     padding: 0 3%;
     position: sticky;
     top:0px;
     z-index: 10;
+    box-sizing: border-box;
 }
 
 /* Left-side of header */
@@ -198,7 +199,7 @@ header {
 .container {
     /* background-color: rgb(255, 127, 127); */
     box-sizing: border-box;
-    height: 88vh;
+    height: 100vh;
     width: 80%;
     margin: 2% 10% 0 10%;
     display: flex;
@@ -213,194 +214,93 @@ main {
     height: 100vh;
     width: 70%;
     margin-right: 1%;
+
+    border: 1px solid rgb(255, 205, 3);
 }
 
-/* Band information Banner ------------------------------------------------ */
 
-/* band info section */
-.band-info-section {
-    background-color: var(--FgBlue);
-    height: 35%;
+/* carousel design */
+
+.carousel-container {
     width: 100%;
+    height: 220px;
     display: flex;
+    justify-content: space-between;
+}
 
-    overflow: hidden;
+.carousel-container .carousel {
+    height: 100%;
+    width: 32%;
+}
+
+.carousel-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-container img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Latest release section */
+.latest-release-container {
+    width: 100%;
+    height: 180px;
+    color: white;
+    border: 1px solid rgb(0, 255, 60);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.latest-release-container .latest-release-content{
+    width: 40%;
+    height: 45%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+/* inmage size */
+.latest-release-container .latest-release-content img{
+    width: 90px;
+    height: 100%;
     
 }
 
-/* image div */
-#band-img {
-    height: 100%;
-    width: 30%;
-    background-size: 100%;
-    background-image: linear-gradient( to bottom, transparent, rgba(20, 65, 56, 1) ), url(http://surl.li/fgojj);
+/* song description */
+.latest-release-content .song-text {
+    margin-right: 90px;
 }
 
-/* image */
-#band-img img{
-    height: 100%;
-    width: 100%;
+/* song date */
+.latest-release-content .song-text p{
+    font-size: 10px;
+    margin-top: 10px;
+    opacity:0.7;
 }
 
-/* band about section */
-.band-text-container {
-    /* border: 1px solid red; */
-    width: 65%;
-    height: 75%;
-    margin: 3% 3%  0% 3%;
-    color:white;
-
-}
-
-/* band name and followers container*/
-.name-follower{
-    height: 25%;
-    width: 100%;
-    display: flex;
-}
-
-#name-style{
-    height: 100%;
-    width: 50%;
-}
-
-#name-style p{
-    margin-top: 3px;
-    font-size: 0.7rem;
-    opacity: 0.6;
-}
-/* follower count */
-#follower-count {
-    height: 100%;
-    width: 50%;
-    text-align:right;
-    font-size: 0.7rem;
-    margin-top:2%;
-    margin-right: 2px;
-}
-
-.band-text-container .para p {
-    font-size: 0.7rem;
-    line-height: 18px;
-}
-
-/* Play an follow */
-.play-follow{
-    margin-top: 5%;
-    width: 40%;
-    height: 18%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.play-follow button {
-    color:white;
-    font-size: 0.8rem;
-    width: 50%;
-    height: 100%;
-    border-radius: 2px;
-    border: none;
-    background-image: linear-gradient(to right, rgb(170, 0, 255) , rgb(255, 0, 170));
-}
-
-.play-follow button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-/* follow word */
-.play-follow div {
-    font-size: 0.8rem;
-    font-weight: 400;
-}
-
-.play-follow div:hover {
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.track-count  {
-    font-size: 0.65rem;
-    margin-top: 0.5rem;
-}
-
-
-/* Band song list ----------------------------------- */
-
-
-.band-song-list {
-    margin-top: 2%;
-    height: 63.5%;
-    width:100%;
-    color:white;
-}
-
-/* Container for song row */
-.sigle-song-container {
-    display: flex;
-    width:100%;
-    height:50px;
-    margin-top: 1%;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--MateBlue);
-}
-
-/* song count */
-.sigle-song-container .num {
-    height: 80%;
-    width: 2%;
-    text-align: center;
-    padding-top: 13px;
-    font-size: 0.7rem;
-}
-
-/* song cover image */
-.sigle-song-container .song-cover {
-    width:5%;
-    height:38px;
-}
-
-.sigle-song-container img{
-    width:100%;
-    height:100%;
-}
-
-/* song  title and singer name */
-.sigle-song-container .song-name {
-    width:70%;
-    height:80%;
-}
-
-.sigle-song-container h4{
-    font-size: 0.8rem;
-    margin-top:5px;
-}
-
-.sigle-song-container p{
-    font-size: 0.6rem;
-    margin-top:2px;
-}
-
-/* icon */
-.sigle-song-container .icon {
-    width:15%;
-    height:80%;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 40px 0px 0px;
-}
-
-/* reducing size of icon */
-.icon .material-symbols-outlined{
-    font-size: 120%;
+/* song duration */
+.latest-release-content .icon-time {
     opacity: 0.7;
+    height: 100%;
+    font-size: 10px;
+}
+/* three dot */
+.latest-release-content .icon-time .material-symbols-outlined{
+    font-size: 20px;
 }
 
-/* ******************************************************************** */
-/* Main Content Area end */
-/* ---------------------------------------------------------------- */
+/* label of section */
+main h2{
+    margin: 20px 0 10px 0;
+    color: white;
+}
+
+
+
 
 /* ******************************************************************** */
 /* Side Bar Start*/
@@ -412,133 +312,96 @@ aside {
     height: 100vh;
     width: 30%;
     margin-left: 1%;
+    /* overflow:hidden; */
 }
-
-/* ************************************************************* */
-/* similar artist container-----------------*/
-.similar-artists-contain {
-    height: 45%;
-    width: 100%;
-    margin-top: 2%;
-
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.similar-artists-contain .name-follower{
-    height: 15%;
-}
-
-/* "Similar Artists" and "Recently Played" text size */
-.name-follower .name-style h2{
-    font-size: 1.6vw;
-}
-
-/* view all text style , in this case view all text*/
-aside section #follower-count{
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-/* similar song list modification of original */
-.similar-artists-contain .sigle-song-container {
-    height:80px;
-    margin-top: 2%;
-    justify-content: space-between;
-    background-color: transparent;
-}
-
-/* song image */
-.similar-artists-contain .song-cover {
-    width:20%;
-    height: 90%;
-}
-
-.similar-artists-contain .sigle-song-container img{
-    width:100%;
-    height:100%;
-}
-
-/* song and singer name */
-.similar-artists-contain .song-name {
-    width:60%;
-    height:80%;
-}
-
-
-.similar-artists-contain .sigle-song-container h4{
-    font-size: 0.8rem;
-    margin:10px 0 8px 0;
-}
-
-/* icon style */
-
-.icon-time {
-    height: 70%;
-    width: 10%;
-}
-
-.icon-time .material-symbols-outlined{ 
-    font-size: 1.3rem;
-    float:right;
-}
-
-#duration {
-    font-size: 0.6rem;
-    float:right;
-}
-
-
-
 /* ***************************************************** */
 /* recently played container-----------------*/
-.recently-played-contain .name-follower{
+aside .sidebar-heading-container{
     height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5%;
 }
 
-.recently-played-contain {
-    margin-top: 8%;
-    height: 70%;
-    width:100%;
-}
-
-.recently-played-contain .sigle-song-container {
-    margin-top: 5px;
-    justify-content: space-around;
-    background-color: transparent;
-}
-
-.recently-played-contain .sigle-song-container .num {
-    width: 3%;
-    padding-top: 13px;
-
-    font-size: 0.7rem;
-}
-
-.recently-played-contain .sigle-song-container .song-cover {
-    width:10%;
-    height:38px;
-}
-
-.recently-played-contain .sigle-song-container .song-name {
-    width:65%;
-    height:80%;
-}
-
-.recently-played-contain .sigle-song-container .icon {
-    width:10%;
-    height:80%;
+.Queue-container {
+    width: 20%;
     display: flex;
     justify-content: space-between;
 }
 
-.recently-played-contain .icon .material-symbols-outlined{
-    font-size: 1.2rem;
-    
+/* Dropdown queue */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+padding: 12px 16px;
+z-index: 1;
+color: var(--FgBlue);
+right: 0;
+}
+  
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* Song list */
+aside .single-song-container {
+
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    justify-content: space-around;
+    background-color: transparent;
+}
+
+aside .single-song-container .num {
+    width: 5%;
+    font-size: 0.7rem;
+}
+
+aside .single-song-container img {
+    width:40px;
+    height:40px;
+}
+
+aside .single-song-container .song-name {
+    width:60%;
+
+}
+
+.single-song-container .song-name h4{
+    font-size: 90%;
+}
+
+.single-song-container .song-name p{
+    font-size: 70%;
+}
+
+aside .single-song-container .icon {
+    width:10%;
+    height:80%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+aside .icon .material-symbols-outlined{
+    font-size: 1.2rem; 
 }
 
 /* Singer name light color */
-.sigle-song-container p {
+.single-song-container p {
     opacity: 0.6;
 }
 
@@ -720,9 +583,3 @@ footer .foot-favIcon {
 .right-container .slidecontainer-volume input {
     width: 100%;
 }
-
-
-
-
-  
-  
