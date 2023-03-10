@@ -615,15 +615,36 @@
     </div>
     <div class="middle-container">
       <div class="music-control">
-        <span class="material-symbols-outlined nextPrev">skip_previous</span>
-        <span class="material-symbols-outlined">pause_circle</span>
-        <span class="material-symbols-outlined nextPrev">skip_next</span>
+        <span class="material-symbols-outlined reduce-icon-size">shuffle</span>
+        <span class="material-symbols-outlined nextPrev reduce-icon-size">skip_previous</span>
+        <span class="material-symbols-outlined increase-icon-size">pause_circle</span>
+        <span class="material-symbols-outlined nextPrev reduce-icon-size">skip_next</span>
+        <span class="material-symbols-outlined reduce-icon-size">repeat</span>
       </div>
       <div class="duration-slider">
+          <p>2:01</p>
+
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div>   
+            
+          <p>5:40</p>
 
       </div>
     </div>
-    <div class="right-container"></div>
+    <div class="right-container">
+
+      <div><span class="material-symbols-outlined reduce-icon-size">queue_music</span></div>
+      <div><span class="material-symbols-outlined reduce-icon-size">lyrics</span></div>
+      <div><span class="material-symbols-outlined reduce-icon-size">speaker</span></div>
+
+      <div class="slidecontainer-volume">
+        <input type="range" min="1" max="30" value="2" class="slider">
+      </div> 
+
+      <div><span class="material-symbols-outlined">zoom_out_map</span></div>
+
+    </div>
   </footer>
 
 

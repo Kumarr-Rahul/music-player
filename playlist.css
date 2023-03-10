@@ -224,6 +224,8 @@ main {
     height: 35%;
     width: 100%;
     display: flex;
+
+    overflow: hidden;
     
 }
 
@@ -248,6 +250,7 @@ main {
     height: 75%;
     margin: 3% 3%  0% 3%;
     color:white;
+
 }
 
 /* band name and followers container*/
@@ -392,7 +395,8 @@ main {
 
 /* reducing size of icon */
 .icon .material-symbols-outlined{
-    font-size: 1.2rem;
+    font-size: 120%;
+    opacity: 0.7;
 }
 
 /* ******************************************************************** */
@@ -417,6 +421,9 @@ aside {
     height: 45%;
     width: 100%;
     margin-top: 2%;
+
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .similar-artists-contain .name-follower{
@@ -550,9 +557,9 @@ footer {
     align-items: center;
     justify-content: space-around;
     background-color: #1e2926;
+    color: white;
 
-    z-index: 5;
-}
+    z-index: 5;}
 
 
 footer .left-container {
@@ -562,7 +569,6 @@ footer .left-container {
 }
 
 footer .middle-container {
-    border: 1px solid orange;
     height: 75%;
     width: 30%;
     display: flex;
@@ -572,9 +578,12 @@ footer .middle-container {
 }
 
 footer .right-container {
-    border: 1px solid orange;
     height: 75%;
-    width:15%
+    width:20%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* ----------------------------------------------------------- */
@@ -627,13 +636,16 @@ footer .foot-songName p{
 footer .foot-favIcon {
     height: 100%;
     width: 25%;
+    display: flex;
+    justify-content: flex-end;
+
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 /* icon size */
 .foot-favIcon .material-symbols-outlined {
     font-size: 110%;
-    color: white;
-    float: right;
     padding: 5%;
     margin-top: 8%;
     opacity: 0.7;
@@ -644,19 +656,17 @@ footer .foot-favIcon {
 
 /* music controls container*/
 .middle-container .music-control {
-    border: 1px solid green;
     height: 70%;
     width: 60%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: white;
 }
 
 /* icon style music control */
 
-
-.middle-container .music-control .material-symbols-outlined.nextPrev {
+/* next previous style */
+.music-control .material-symbols-outlined.nextPrev {
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
@@ -664,18 +674,53 @@ footer .foot-favIcon {
   'opsz' 48
 }
 
+/* reduce icon size of music control */
+.reduce-icon-size {
+    font-size: 110%;
+}
 
-/* slider style container*/
+/* increase size of pause button */
+.increase-icon-size {
+    font-size: 200%;
+}
+
+
+/* slider and duration time style container*/
 .middle-container .duration-slider {
-    border: 1px solid rgb(241, 241, 5);
     height: 20%;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* duration font size */ 
+.duration-slider p {
+    font-size: 70%;
+    opacity: 0.7;
+    padding-bottom: 3px;
+}
+
+/* slider container */
+.slidecontainer{
+    width: 85%;
+}
+
+.slidecontainer input[type="range"] {
+    width: 100%;
+    opacity: 0.8;
 }
 
 
 /* footer right side content */
 
+.right-container .slidecontainer-volume { 
+    width: 40%;
+}
 
+.right-container .slidecontainer-volume input {
+    width: 100%;
+}
 
 
 
