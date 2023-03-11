@@ -260,13 +260,44 @@ main {
     align-items: center;
     margin-right: 20px;
     margin-bottom: 15px;
+
+    position: relative;
+}
+
+/* hover helper */
+.hover-helper{
+    width: 25%;
+    height: 100%;
 }
 
 /* image size */
 .latest-release-container .latest-release-content img{
-    width: 90px;
+    width: 100%;
     height: 100%;
-    
+}
+
+/* play overlay on song image */
+.latest-release-content .play-overlay{
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0.7;
+    background-color: rgba(0, 0, 0, 0.469);
+}
+
+.play-overlay span {
+    position: absolute;
+    top: 25%;
+    left:25%;
+    font-size: 3vw;
+}
+
+/* show play button on hover */
+.latest-release-content .hover-helper:hover .play-overlay{
+    display: block;
 }
 
 /* song description */
@@ -326,7 +357,6 @@ main h2{
 .latest-release-content ul span{
     margin-right: 8px;
 }
-
 
 /* --------------------------------------------- */
 /* popular artist container*/
@@ -578,8 +608,6 @@ aside .sidebar-heading-container{
     border-radius: 5px;
     color: white;
     right: 0;
-
-    z-index: 2;
 }
 
 .dropdown-content li{
