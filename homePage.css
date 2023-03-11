@@ -192,18 +192,17 @@ header {
 }
 
 /* ******************************************************************** */
-/* Container Start*/
+/* Main Container Start*/
 /* ---------------------------------------------------------------- */
 
 .container {
-    /* background-color: rgb(255, 127, 127); */
     box-sizing: border-box;
     height: 100vh;
     width: 80%;
     margin: 2% 10% 0 10%;
     display: flex;
     /* to show content above footer else it will go under footer */
-    margin-bottom: 68px;
+    margin-bottom: 70px;
 }
 
 /* ******************************************************************** */
@@ -217,9 +216,7 @@ main {
     margin-right: 1%;
     overflow: scroll;
     overflow-x: hidden;
-
 }
-
 
 /* carousel design ---------------------------*/
 
@@ -300,6 +297,36 @@ main h2{
     margin: 25px 0 15px 0;
     color: white;
 }
+
+
+.latest-release-content .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--FgBlue);
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    border-radius: 5px;
+    color: white;
+    right: 0;
+    
+    /* z-index: 2; */
+}
+
+.latest-release-content ul div {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.latest-release-content ul div:hover {
+    opacity: 0.7;
+}
+
+.latest-release-content ul span{
+    margin-right: 8px;
+}
+
 
 /* --------------------------------------------- */
 /* popular artist container*/
@@ -502,14 +529,7 @@ main h2{
     .english-song h5{
         margin-top: 4px;
     }
-    
-  
 
-
-
- 
-
-  
 
 /* ******************************************************************** */
 /* Side Bar Start*/
@@ -539,29 +559,47 @@ aside .sidebar-heading-container{
 .Queue-container {
     width: 20%;
     display: flex;
-    justify-content: space-between;
+    margin-right: 10px;
 }
 
 /* Dropdown queue */
 .dropdown {
     position: relative;
     display: inline-block;
-  }
+}
   
 .dropdown-content {
-display: none;
-position: absolute;
-background-color: #f9f9f9;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-padding: 12px 16px;
-z-index: 1;
-color: var(--FgBlue);
-right: 0;
+    display: none;
+    position: absolute;
+    background-color: var(--FgBlue);
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    border-radius: 5px;
+    color: white;
+    right: 0;
+
+    z-index: 2;
+}
+
+.dropdown-content li{
+    list-style: none;
+    padding: 5px 0px 5px 8px;
+    border:1px solid var(--BgBlue);
+    
+}
+
+.dropdown:hover{
+    cursor: pointer;
+}
+
+.dropdown-content li:hover{
+    cursor: pointer;
+    opacity: 0.7;
 }
   
 .dropdown:hover .dropdown-content {
-display: block;
+    display: block;
 }
 
 /* Song list */
