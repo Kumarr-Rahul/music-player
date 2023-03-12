@@ -343,8 +343,8 @@ main h2{
     font-size:1.8vw;
 }
 
-
-.latest-release-content .dropdown-content {
+/* not required handled by aside style */
+/* .latest-release-content .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--FgBlue);
@@ -355,8 +355,8 @@ main h2{
     color: white;
     right: 0;
     
-    /* z-index: 2; */
-}
+    z-index: 10;
+} */
 
 .latest-release-content ul div {
     display: flex;
@@ -395,6 +395,12 @@ main h2{
     width: 8.5vw;
     border-radius: 50%;
 }
+
+.popular-artist img:hover {
+    background: greenyellow; 
+    box-shadow: 0 0 50px rgba(172, 255, 47, 0.516); 
+}
+
 
 /* rewmoving underline from anchor tag */
 .popular-artist a p{
@@ -565,6 +571,11 @@ main h2{
         width: 7vw;
     }
 
+    .english-song img:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
 
     .english-song p{
         font-size: 0.8vw;
@@ -594,7 +605,7 @@ aside {
     /* overflow:hidden; */
 }
 /* ***************************************************** */
-/* recently played container-----------------*/
+/* Queue container-----------------*/
 aside .sidebar-heading-container{
     /* height: 8%; */
     display: flex;
@@ -624,18 +635,20 @@ aside .sidebar-heading-container{
     display: none;
     position: absolute;
     background-color: var(--FgBlue);
-    min-width: 120px;
+    min-width: 10vw;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
     border-radius: 5px;
     color: white;
     right: 0;
+    z-index: 10;
 }
 
 .dropdown-content li{
     list-style: none;
     padding: 5px 0px 5px 8px;
     border:1px solid var(--BgBlue);
+    font-size: 1vw;
     
 }
 
@@ -729,7 +742,7 @@ footer {
 
 footer .left-container {
     height: 75%;
-    width: 15%;
+    width: 18%;
     display: flex;
 }
 
@@ -753,15 +766,12 @@ footer .right-container {
 
 /* ----------------------------------------------------------- */
 /* footer left side content */
-.foot-image {
-    height: 100%;
-    width: 25%;
-}
 
 /* song cover image */
 .foot-image img {
-    height: 100%;
-    width: 90%;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
 }
 
 /* song and singer name container */
@@ -804,14 +814,13 @@ footer .foot-favIcon {
     display: flex;
     justify-content: flex-end;
 
-    white-space: nowrap;
-    overflow: hidden;
+    margin-left: 10px;
 }
 
 /* icon size */
 .foot-favIcon .material-symbols-outlined {
     font-size: 110%;
-    padding: 5%;
+    padding: 0 5px;
     margin-top: 8%;
     opacity: 0.7;
 }

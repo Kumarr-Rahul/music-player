@@ -558,12 +558,13 @@ footer {
     background-color: #1e2926;
     color: white;
 
-    z-index: 5;}
+    z-index: 5;
+}
 
 
 footer .left-container {
     height: 75%;
-    width: 15%;
+    width: 18%;
     display: flex;
 }
 
@@ -587,15 +588,12 @@ footer .right-container {
 
 /* ----------------------------------------------------------- */
 /* footer left side content */
-.foot-image {
-    height: 100%;
-    width: 25%;
-}
 
 /* song cover image */
 .foot-image img {
-    height: 100%;
-    width: 90%;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
 }
 
 /* song and singer name container */
@@ -638,14 +636,13 @@ footer .foot-favIcon {
     display: flex;
     justify-content: flex-end;
 
-    white-space: nowrap;
-    overflow: hidden;
+    margin-left: 10px;
 }
 
 /* icon size */
 .foot-favIcon .material-symbols-outlined {
     font-size: 110%;
-    padding: 5%;
+    padding: 0 5px;
     margin-top: 8%;
     opacity: 0.7;
 }
