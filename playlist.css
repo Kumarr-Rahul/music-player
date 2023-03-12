@@ -7,6 +7,7 @@
 
 body{
     background-color: var(--BgBlue);
+    /* min-width: 300px; */
     
 }
 
@@ -56,8 +57,8 @@ header {
 }
 
 .app-identity img {
-    height: 50px;
-    width: 50px;
+    height: 4vw;
+    width: 4vw;
     margin-right: 10px;
     margin-top:5px;
 
@@ -67,7 +68,7 @@ header {
 .app-name {
     color:white;
     font-family: 'Lato', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.3vw;
     animation: zoom-in-zoom-out 1s ease infinite;
 }
 
@@ -76,7 +77,7 @@ header {
     margin-left: 15%;
     font-family: 'Lato', sans-serif;
     font-weight:700;
-    font-size: 0.9rem;
+    font-size: 0.9vw;
     border: solid 1px #084035;
     padding: 5px 20px;
     border-radius: 5px;
@@ -108,7 +109,7 @@ header {
 
 .search-box{
     height: 30px;
-    width: 45%;
+    width: 35vw;
     border-radius: 10px;
     background-color: var(--FgBlue);
     display: flex;
@@ -210,7 +211,7 @@ header {
 
 main {
     /* background-color: orange; */
-    height: auto;
+    height: 90vh;
     width: 70%;
     margin-right: 1%;
     overflow: scroll;
@@ -222,7 +223,7 @@ main {
 /* band info section */
 .band-info-section {
     background-color: var(--FgBlue);
-    height: 15vw;
+    height: 17vw;
     width: 100%;
     display: flex;
 
@@ -232,8 +233,8 @@ main {
 
 /* image div */
 #band-img {
-    height: 18vw;
-    width: 18vw;
+    height: 18.5vw;
+    width: 18.5vw;
     background-size: 100%;
     background-image: linear-gradient( to bottom, transparent, rgba(20, 65, 56, 1) ), url(http://surl.li/fgojj);
 }
@@ -243,7 +244,7 @@ main {
     /* border: 1px solid red; */
     width: 65%;
     height: 75%;
-    margin: 20px 3%  0% 3%;
+    margin: 2vw 3%  0% 3%;
     color:white;
 
 }
@@ -262,26 +263,26 @@ main {
 
 #name-style p{
     margin-top: 3px;
-    font-size: 0.7vw;
-    opacity: 0.6;
+    font-size: 0.8vw;
+    opacity: 0.;
 }
 
 #name-style h4{
-    font-size: 1.2vw;
+    font-size: 1.3vw;
 }
 /* follower count */
 #follower-count {
     height: 100%;
     width: 50%;
     text-align:right;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
     margin-top:2%;
     margin-right: 2px;
 }
 
 .band-text-container .para p {
-    font-size: 0.7vw;
-    line-height: 1.05vw;
+    font-size: 0.77vw;
+    line-height: 1.4vw;
     font-weight: 400;
 }
 
@@ -327,8 +328,7 @@ main {
 }
 
 
-/* Band song list ----------------------------------- */
-
+/* Band song list section ----------------------------------- */
 
 .band-song-list {
     margin-top: 2%;
@@ -341,7 +341,7 @@ main {
 .single-song-container {
     display: flex;
     width:100%;
-    height: 3.5vw;
+    height: 4.5vw;
     margin-top: 1vw;
     align-items: center;
     justify-content: space-around;
@@ -352,13 +352,13 @@ main {
 .single-song-container .num {
     width: 2%;
     text-align: center;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
 }
 
 /* song cover image */
 .single-song-container .song-cover {
-    width:3vw;
-    height:3vw;
+    width:3.5vw;
+    height:3.5vw;
 }
 
 .single-song-container img{
@@ -373,12 +373,12 @@ main {
 }
 
 .single-song-container h4{
-    font-size: 0.8vw;
-    margin-top:5px;
+    font-size: 0.9vw;
+    margin-top:0.7vw;
 }
 
 .single-song-container p{
-    font-size: 0.6vw;
+    font-size: 0.7vw;
     margin-top:2px;
 }
 
@@ -395,6 +395,11 @@ main {
     opacity: 0.7;
 }
 
+.band-song-list .single-song-container:hover {
+    cursor: pointer;
+    background-color: var(--FgBlue);
+}
+
 /* ******************************************************************** */
 /* Main Content Area end */
 /* ---------------------------------------------------------------- */
@@ -406,7 +411,7 @@ main {
 aside {
     /* background-color: orange; */
     color:white;
-    height: auto;
+    height: 90vh;
     width: 22vw;
     margin-left: 5px;
 
@@ -490,13 +495,18 @@ aside .icon-time{
 }
 
 
+.similar-artists-contain .single-song-container:hover {
+    cursor: pointer;
+    background-color:#062b23
+}
+
+
 /* ***************************************************** */
 /* recently played container-----------------*/
 .recently-played-contain {
     margin-top: 8%;
     height: 70vh;
     width:100%;
-    overflow: scroll;
 }
 
 .recently-played-contain .name-follower{
@@ -547,6 +557,11 @@ aside .icon-time{
 /* Singer name light color */
 .recent-song-container p {
     opacity: 0.6;
+}
+
+.recently-played-contain .recent-song-container:hover {
+    cursor: pointer;
+    background-color:#062b23
 }
 
 
