@@ -85,7 +85,7 @@ header {
 }
 
 #favourites:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -108,7 +108,7 @@ header {
 }
 
 .search-box{
-    height: 30px;
+    height: 25px;
     width: 35vw;
     border-radius: 10px;
     background-color: var(--FgBlue);
@@ -171,6 +171,7 @@ header {
 .right-contain > span {
     color:white;
     margin: 0 5%;
+    font-size: 18px;
 }
 /* Notification icon hover */
 #notification:hover {
@@ -182,8 +183,8 @@ header {
 
 /* Profile image */
 .image {
-    height: 50px;
-    width: 50px;
+    height: 4vw;
+    width: 4vw;
 }
 
 .image img {
