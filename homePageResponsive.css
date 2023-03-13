@@ -68,10 +68,39 @@
     }
 
 
-    /* station section  */
+    /* station section ---------- */
     .station-container {
         margin-top:20px;
         margin-left: 14.5vw;
+    }
+
+    /* expandable sidebar style---------------- */
+    .single-song-container .num { 
+        font-size: 1.2vw;
+    }
+
+    .single-song-container img {
+        width: 5vw;
+        height: 5vw;
+        margin-right: 8px;
+    }
+
+    
+    .single-song-container .song-name h4{
+        font-size: 1.5vw;
+    }
+    
+    .single-song-container .song-name p{
+        font-size: 1vw;
+        margin-top: 4px;
+    }
+    
+    .single-song-container .icon {
+        margin-right: 10px;
+    }
+
+    .icon .material-symbols-outlined{
+        font-size: 2vw; 
     }
 
     /* footer section */
@@ -113,7 +142,6 @@
 
 @media (max-width:500px) {
 
-    
 
     /* footer media query --------------------- */
     .foot-image img {

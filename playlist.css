@@ -238,7 +238,7 @@ main {
     height: 18.5vw;
     width: 18.5vw;
     background-size: 100%;
-    background-image: linear-gradient( to bottom, transparent, rgba(20, 65, 56, 1) ), url(http://surl.li/fgojj);
+    background-image: linear-gradient( to bottom, transparent, rgba(20, 65, 56, 1) ), url(media/imagine.jpg);
 }
 
 /* band about section */
