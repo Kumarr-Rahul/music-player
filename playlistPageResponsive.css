@@ -1,6 +1,6 @@
 @media (max-width: 800px) {
 	/* animated favourites text will be hidden for this viewport width*/
-	/* .viewMore {
+	.viewMore {
         display: block;
     }
 
@@ -10,7 +10,7 @@
 
     main {
         width:100%;
-    } */
+    }
 
     /* header media query --------------------- */
     .app-identity img {

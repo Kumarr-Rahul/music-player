@@ -339,7 +339,7 @@ main {
 }
 
 /* Container for song row */
-.single-song-container {
+main .single-song-container {
     display: flex;
     width:100%;
     height: 4.5vw;
@@ -429,6 +429,7 @@ aside {
     overflow: scroll; */
 }
 
+
 .similar-artists-contain .name-follower{
     height: auto;
     margin-bottom: 10px;
@@ -448,9 +449,15 @@ aside section #follower-count{
 /* similar song list modification of original */
 .similar-artists-contain .single-song-container {
     height:auto;
-    background-color: transparent;
     position: relative;
-    margin-top: 1.5vw
+    margin-top: 1.5vw;
+
+    display: flex;
+    width:100%;
+    height: 4.5vw;
+    margin-top: 1vw;
+    align-items: center;
+    justify-content: space-around;
 
 }
 
@@ -489,6 +496,8 @@ aside .icon-time{
     font-size: 0.6vw;
 }
 
+
+
 .single-song-container .icon-time{
     position: absolute;
     top:0px;
@@ -514,7 +523,7 @@ aside .icon-time{
     height: auto; 
 }
 
-.recently-played-contain .recent-song-container {
+.recent-song-container {
     margin-top: 1.5vw;
     height: auto;
 
@@ -525,7 +534,7 @@ aside .icon-time{
     position: relative;
 }
 
-.recently-played-contain .recent-song-container .num {
+.recent-song-container .num {
     font-size: 0.7vw;
     margin-right: 10px;
 }
@@ -540,18 +549,23 @@ aside .icon-time{
     
 }
 
-.recently-played-contain .recent-song-container img {
+.recent-song-container img {
     width:4vw;
     height:4vw;
     margin-right: 10px;
 }
 
-.recently-played-contain .recent-song-container .icon {
+.recent-song-container .icon {
     position: absolute;
     right: 15px;
 }
 
 .recently-played-contain .icon .material-symbols-outlined{
+    font-size: 1vw; 
+}
+
+/* dropdown part */
+.viewMore .icon .material-symbols-outlined{
     font-size: 1vw; 
 }
 
@@ -741,8 +755,126 @@ footer .foot-favIcon {
     width: 100%;
 }
 
+/* Footer ends here------------------------------------------- */
+/* ****************************************************** */
+
+
+/* View More button when screen size reduce */
+.viewMore {
+    height: 45px;
+    width: 40px;
+
+    background-color: var(--FgBlue);
+    color: white;
+
+    position: fixed;
+    right: 0;
+    top: 100px;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px;
+
+    display: none;
+}
+
+/* expand symbol---- */
+#expand-button {
+    font-size: 40px;
+    position: fixed;
+    right: 2px;
+    top: 102px;
+}
+
+/* backround will hidden when hover */
+.viewMore:hover{
+    background-color: var(--BgBlue)
+}
+
+#expand-button:hover{
+    cursor: pointer;
+    color: rgb(255, 166, 0)
+}
+
+/* queue sidebar will showup */
+.viewMore:hover .viewMore-dropdown-container{
+    display: block;
+}
+
+/* DROPDOWN menu container style */
+.viewMore-dropdown-container {
+   
+    position: fixed;
+    right: 0;
+    top: 140px;
+
+    background-color: var(--FgBlue);
+    min-width: 25vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    border-radius: 5px;
+    color: white;
+    right: 0;
+    z-index: 10;
+
+    display: none;
+
+    overflow: scroll;
+}
+
+/* list item->queue */
+.viewMore-dropdown-container li{
+    list-style: none;
+    padding: 5px 0px 5px 5px;
+    border:1px solid var(--BgBlue);
+    font-size: 3vw;
+    background-color: rgb(0, 35, 26);
+    
+}
+
+.viewMore-dropdown-container li:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* styling chane for similar artist inside dropdown */
+
+.viewMore .single-song-container {
+    height:auto;
+    position: relative;
+    /* margin-top: 1vw; */
+    display: flex;
+    width:100%;
+    height: 4.5vw;
+
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+/* adjusting size of song durationa and more option icon */
+.viewMore .single-song-container .icon-time {
+    position: absolute;
+    top: -11px;
+    right: 35px;
+}
+
+/* Recently Played song dropdown design adjustment */
+
+.viewMore .recent-song-container {
+    
+    margin-top: 0;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    
+    background-color: transparent;
+    position: relative;
+}
+
+.viewMore .icon .material-symbols-outlined{
+    font-size: 1vw; 
+}
 
 
 
-  
-  
