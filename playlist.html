@@ -20,6 +20,8 @@
 <!-- animation css -->
   <link rel="stylesheet" href="animation.css" />
 
+  <link rel="stylesheet" href="playlistPageResponsive.css" />
+
   <title>Playlist Page</title>
 </head>
 
@@ -683,15 +685,15 @@
     </div>
     <div class="right-container">
 
-      <div><span class="material-symbols-outlined reduce-icon-size">queue_music</span></div>
-      <div><span class="material-symbols-outlined reduce-icon-size">lyrics</span></div>
+      <div><span id="queue_music" class="material-symbols-outlined reduce-icon-size">queue_music</span></div>
+      <div><span id="lyrics" class="material-symbols-outlined reduce-icon-size">lyrics</span></div>
       <div><span class="material-symbols-outlined reduce-icon-size">speaker</span></div>
 
       <div class="slidecontainer-volume">
         <input type="range" min="1" max="30" value="2" class="slider">
-      </div> 
+      </div>
 
-      <div><span class="material-symbols-outlined">zoom_out_map</span></div>
+      <div><span id="zoom_out_map" class="material-symbols-outlined">zoom_out_map</span></div>
 
     </div>
   </footer>
