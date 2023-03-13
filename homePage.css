@@ -7,6 +7,9 @@
 body{
     background-color: var(--BgBlue);
     
+    /* setting position for "view more" Media Query */
+    position: relative;
+    
 }
 
 :root {
@@ -20,8 +23,6 @@ body{
     --BgBlue: #041F19;
     --FgBlue: #084035;
     --MateBlue: #12332D;
-
-
     
 }
 
@@ -655,7 +656,6 @@ aside .sidebar-heading-container{
     padding: 5px 0px 5px 8px;
     border:1px solid var(--BgBlue);
     font-size: 1vw;
-    
 }
 
 .dropdown:hover{
@@ -672,7 +672,7 @@ aside .sidebar-heading-container{
 }
 
 /* Song list */
-aside .single-song-container {
+.single-song-container {
 
     width: 100%;
 
@@ -683,19 +683,19 @@ aside .single-song-container {
     background-color: transparent;
 }
 
-aside .single-song-container .num {
+.single-song-container .num {
     width: 5%;
     font-size: 0.8vw;
     margin-right: 8px;
 }
 
-aside .single-song-container img {
+.single-song-container img {
     width: 2.7vw;
     height: 2.7vw;
     margin-right: 8px;
 }
 
-aside .single-song-container .song-name {
+.single-song-container .song-name {
     width:60%;
 
 }
@@ -709,7 +709,7 @@ aside .single-song-container .song-name {
     margin-top: 4px;
 }
 
-aside .single-song-container .icon {
+.single-song-container .icon {
     width:10%;
     height:80%;
     display: flex;
@@ -717,7 +717,7 @@ aside .single-song-container .icon {
     margin-bottom: 10px;
 }
 
-aside .icon .material-symbols-outlined{
+.icon .material-symbols-outlined{
     font-size: 1.3vw; 
 }
 
@@ -892,7 +892,7 @@ footer .foot-favIcon {
 }
 
 
-/* footer right side content */
+/* footer right side content ------------------------ */
 
 .right-container .slidecontainer-volume { 
     width: 40%;
@@ -900,4 +900,82 @@ footer .foot-favIcon {
 
 .right-container .slidecontainer-volume input {
     width: 100%;
+}
+
+/* Footer ends here------------------------------------------- */
+
+/* View More button when screen size reduce */
+.viewMore {
+    height: 45px;
+    width: 40px;
+
+    background-color: var(--FgBlue);
+    color: white;
+
+    position: fixed;
+    right: 0;
+    top: 100px;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px;
+
+    display: none;
+}
+
+/* expand symbol---- */
+#expand-button {
+    font-size: 40px;
+    position: fixed;
+    right: 2px;
+    top: 102px;
+}
+
+/* backround will hidden when hover */
+.viewMore:hover{
+    background-color: var(--BgBlue)
+}
+
+#expand-button:hover{
+    cursor: pointer;
+    color: rgb(255, 166, 0)
+}
+
+/* queue sidebar will showup */
+.viewMore:hover .viewMore-dropdown-container{
+    display: block;
+}
+
+/* DROPDOWN menu container style */
+.viewMore-dropdown-container {
+   
+    position: fixed;
+    right: 0;
+    top: 140px;
+
+    background-color: var(--FgBlue);
+    min-width: 30vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    border-radius: 5px;
+    color: white;
+    right: 0;
+    z-index: 10;
+
+    display: none;
+
+    overflow: scroll;
+}
+
+/* list item->queue */
+.viewMore-dropdown-container li{
+    list-style: none;
+    padding: 5px 0px 5px 8px;
+    border:1px solid var(--BgBlue);
+    font-size: 3vw;
+    
+}
+
+.viewMore-dropdown-container li:hover{
+    cursor: pointer;
+    opacity: 0.7;
 }
